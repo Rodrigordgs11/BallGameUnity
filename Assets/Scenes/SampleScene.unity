@@ -449,8 +449,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 577.5, y: 219.81}
-  m_SizeDelta: {x: 500, y: 75}
+  m_AnchoredPosition: {x: 420.5, y: 219.81}
+  m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65510742
 MonoBehaviour:
@@ -1465,7 +1465,6 @@ GameObject:
   - component: {fileID: 504700333}
   - component: {fileID: 504700338}
   - component: {fileID: 504700340}
-  - component: {fileID: 504700339}
   - component: {fileID: 504700341}
   m_Layer: 0
   m_Name: car
@@ -1573,102 +1572,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!82 &504700339
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504700331}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9d4bb414f06b64b4cb6878a31d4d0262, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!82 &504700340
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1779,7 +1682,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   steerSpeed: 180
   bodyPrefab: {fileID: 3653426275185106273, guid: c8fd404ffa28966439896ea45b5b24de, type: 3}
-  Gap: 0
   score: 0
   scoreText: {fileID: 65510742}
   level: 0
@@ -1793,7 +1695,6 @@ MonoBehaviour:
   level2trash: {fileID: 1451593200}
   level3Food: {fileID: 1564219341}
   level3trash: {fileID: 2092339569}
-  levelUpAudio: {fileID: 504700340}
   catchFoodAudio: {fileID: 504700340}
 --- !u!1 &527256966
 GameObject:
@@ -3776,7 +3677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952632783}
   m_LocalRotation: {x: -0, y: 0.70464265, z: -0, w: 0.70956236}
-  m_LocalPosition: {x: -12.84, y: 1.03, z: -0.1}
+  m_LocalPosition: {x: -12.84, y: 1.03, z: 0.1}
   m_LocalScale: {x: 26, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4193,8 +4094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 678.5, y: 42}
-  m_SizeDelta: {x: 692.62, y: 252.9}
+  m_AnchoredPosition: {x: 373.2, y: 140.4}
+  m_SizeDelta: {x: 203.1, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070311057
 MonoBehaviour:

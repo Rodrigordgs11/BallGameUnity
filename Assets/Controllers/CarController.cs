@@ -9,7 +9,6 @@ public class CarController : MonoBehaviour
     public static float moveSpeed;
     public float steerSpeed;
     public GameObject bodyPrefab;
-    public int Gap;
 
     public int score;
     public Text scoreText;
@@ -28,11 +27,7 @@ public class CarController : MonoBehaviour
     public GameObject level3Food;
     public GameObject level3trash;
 
-    public AudioSource levelUpAudio;
     public AudioSource catchFoodAudio;
-
-    List<GameObject> BodyParts = new List<GameObject>();
-    List<Vector3> PositionHistory = new List<Vector3>();
 
     void Start()
     {
@@ -40,7 +35,6 @@ public class CarController : MonoBehaviour
         ResetButtonObject.SetActive(false);
         level2Food.SetActive(false);
         level = 1;
-        levelUpAudio = GetComponent<AudioSource>();
         catchFoodAudio = GetComponent<AudioSource>();
 
     }
@@ -78,15 +72,12 @@ public class CarController : MonoBehaviour
 
             if(score == 8){
                 level++;
-                moveSpeed += 1.5f;
-                levelUpAudio.Play();
+                moveSpeed += 1.5f;  
             }
 
             if(score == 16){
                 level++;
                 moveSpeed += 1.5f;
-                UnityEngine.Debug.Log(moveSpeed);
-                levelUpAudio.Play();
             }
 
             if(score == 24){
