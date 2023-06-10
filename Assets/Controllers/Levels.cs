@@ -17,13 +17,13 @@ public class Levels : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1;
-        SnakeController.moveSpeed = 5f; 
+        SnakeController.moveSpeed = 5.5f; 
     }
 
     public void Hard()
     {
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1;
-        SnakeController.moveSpeed = 5.5f; 
+        SnakeController.moveSpeed = 6.5f; 
     }
 }

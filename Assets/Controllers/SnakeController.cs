@@ -109,13 +109,14 @@ public class SnakeController : MonoBehaviour
 
             if(score == 8){
                 level++;
-                moveSpeed += 1f;
+                moveSpeed += 1.5f;
                 levelUpAudio.Play();
             }
 
             if(score == 16){
                 level++;
                 moveSpeed += 1.5f;
+                UnityEngine.Debug.Log(moveSpeed);
                 levelUpAudio.Play();
             }
 
