@@ -10,20 +10,20 @@ public class Levels : MonoBehaviour
     {
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1;
-        SnakeController.moveSpeed = 4f; 
+        CarController.moveSpeed = 4f; 
     }
 
     public void Medium()
     {
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1;
-        SnakeController.moveSpeed = 5.5f; 
+        CarController.moveSpeed = 5.5f; 
     }
 
     public void Hard()
     {
         SceneManager.LoadScene("SampleScene");
         Time.timeScale = 1;
-        SnakeController.moveSpeed = 6.5f; 
+        CarController.moveSpeed = 6.5f; 
     }
 }

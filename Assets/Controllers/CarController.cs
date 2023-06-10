@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class SnakeController : MonoBehaviour
+public class CarController : MonoBehaviour
 {
     public static float moveSpeed;
     public float steerSpeed;

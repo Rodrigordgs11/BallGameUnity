@@ -1463,10 +1463,10 @@ GameObject:
   - component: {fileID: 504700335}
   - component: {fileID: 504700334}
   - component: {fileID: 504700333}
-  - component: {fileID: 504700337}
   - component: {fileID: 504700338}
   - component: {fileID: 504700340}
   - component: {fileID: 504700339}
+  - component: {fileID: 504700341}
   m_Layer: 0
   m_Name: car
   m_TagString: Untagged
@@ -1557,36 +1557,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &504700337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504700331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0a2bed08a0c7824699c6c4cb443ec13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  steerSpeed: 180
-  bodyPrefab: {fileID: 3653426275185106273, guid: c8fd404ffa28966439896ea45b5b24de, type: 3}
-  Gap: 100
-  score: 0
-  scoreText: {fileID: 65510742}
-  level: 1
-  levelText: {fileID: 1070311057}
-  GameOver: {fileID: 1403335356}
-  Win: {fileID: 571612681}
-  ResetButtonObject: {fileID: 1466847007}
-  snake: {fileID: 504700331}
-  level1trash: {fileID: 193820527}
-  level2Food: {fileID: 1445507589}
-  level2trash: {fileID: 1451593200}
-  level3Food: {fileID: 1564219341}
-  level3trash: {fileID: 2092339569}
-  levelUpAudio: {fileID: 504700340}
-  catchFoodAudio: {fileID: 504700340}
 --- !u!54 &504700338
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1795,6 +1765,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &504700341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504700331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a2bed08a0c7824699c6c4cb443ec13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steerSpeed: 180
+  bodyPrefab: {fileID: 3653426275185106273, guid: c8fd404ffa28966439896ea45b5b24de, type: 3}
+  Gap: 0
+  score: 0
+  scoreText: {fileID: 65510742}
+  level: 0
+  levelText: {fileID: 1070311057}
+  GameOver: {fileID: 1403335356}
+  Win: {fileID: 571612681}
+  ResetButtonObject: {fileID: 1466847007}
+  snake: {fileID: 504700331}
+  level1trash: {fileID: 193820527}
+  level2Food: {fileID: 1445507589}
+  level2trash: {fileID: 1451593200}
+  level3Food: {fileID: 1564219341}
+  level3trash: {fileID: 2092339569}
+  levelUpAudio: {fileID: 504700340}
+  catchFoodAudio: {fileID: 504700340}
 --- !u!1 &527256966
 GameObject:
   m_ObjectHideFlags: 0
@@ -5125,7 +5125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1466847008
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5191,8 +5191,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 504700337}
-        m_TargetAssemblyTypeName: SnakeController, Assembly-CSharp
+      - m_Target: {fileID: 504700341}
+        m_TargetAssemblyTypeName: CarController, Assembly-CSharp
         m_MethodName: ResetGame
         m_Mode: 1
         m_Arguments:
