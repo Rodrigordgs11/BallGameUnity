@@ -52,17 +52,6 @@ public class CarController : MonoBehaviour
         float steerDirection = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up * steerDirection * steerSpeed * Time.deltaTime);
 
-        PositionHistory.Insert(0, transform.position);
-        int index = 0;
-        foreach (var body in BodyParts)
-        {
-            Vector3 point = PositionHistory[Mathf.Clamp(index * Gap, 0, PositionHistory.Count - 1)];
-            Vector3 moveDirection = point - body.transform.position;
-            body.transform.position += moveDirection * moveSpeed * Time.deltaTime;
-            body.transform.LookAt(point);
-            index++;
-        }
-
         if(score == 8){
             level1trash.SetActive(false);
             level2Food.SetActive(true);
@@ -77,26 +66,6 @@ public class CarController : MonoBehaviour
         }
 
         scoreText.text = "Score: " + score.ToString();
-    }
-
-    void GrowSnake()
-    {
-        GameObject body = Instantiate(bodyPrefab);
-        BodyParts.Add(body);
-
-        if (BodyParts.Count > 1)
-        {
-            Transform previousBody = BodyParts[BodyParts.Count - 2].transform;
-            body.transform.parent = previousBody;
-            body.transform.localPosition = new Vector3(0, 0, -previousBody.localScale.x);
-            body.transform.localRotation = Quaternion.identity;
-        }
-        else
-        {
-            body.transform.parent = snake.transform;
-            body.transform.localPosition = Vector3.zero;
-            body.transform.localRotation = Quaternion.identity;
-        }
     }
 
     private void OnTriggerEnter(Collider collider)
