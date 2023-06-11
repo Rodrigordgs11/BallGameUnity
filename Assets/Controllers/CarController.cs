@@ -10,9 +10,9 @@ public class CarController : MonoBehaviour
     public float steerSpeed;
     public GameObject bodyPrefab;
 
-    public int score;
+    private int score;
     public Text scoreText;
-    public int level;
+    private int level;
     public Text levelText;
 
     public GameObject GameOver;
@@ -27,7 +27,7 @@ public class CarController : MonoBehaviour
     public GameObject level3Food;
     public GameObject level3trash;
 
-    public AudioSource catchFoodAudio;
+    public AudioSource[] sounds;
 
     void Start()
     {
@@ -35,8 +35,6 @@ public class CarController : MonoBehaviour
         ResetButtonObject.SetActive(false);
         level2Food.SetActive(false);
         level = 1;
-        catchFoodAudio = GetComponent<AudioSource>();
-
     }
 
     void Update()
@@ -68,22 +66,26 @@ public class CarController : MonoBehaviour
         {
             Destroy(collider.gameObject);
             score++;
-            catchFoodAudio.Play();
+            sounds[0].Play();
 
             if(score == 8){
                 level++;
                 moveSpeed += 1.5f;  
+                sounds[1].Play();
             }
 
             if(score == 16){
                 level++;
                 moveSpeed += 1.5f;
+                sounds[1].Play();
             }
 
             if(score == 24){
                 Win.SetActive(true);
                 Time.timeScale = 0;
                 ResetButtonObject.SetActive(true);
+                sounds[3].Play();
+                sounds[4].Stop();
             }
 
             levelText.text = "Level " + level.ToString();
@@ -94,6 +96,8 @@ public class CarController : MonoBehaviour
             GameOver.SetActive(true);
             Time.timeScale = 0;
             ResetButtonObject.SetActive(true);
+            sounds[2].Play();
+            sounds[4].Stop();
         }
     }
 
